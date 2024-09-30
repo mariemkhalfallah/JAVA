@@ -62,12 +62,20 @@ class zoo {
         }
     }
 
-    int searchAnimal(String name) {
+     int searchAnimal(String name) {
         for (int i = 0; i < nbrAnimal; i++) {
             if (animals[i].name.equals(name)) {
                 return i;
             }
         }
         return -1;
+    }
+
+     static zoo comparerZoo(zoo z1, zoo z2) {
+        if (z1.nbrAnimal > z2.nbrAnimal) {
+            return z1;
+        } else {
+            return z2;
+        }
     }
 }

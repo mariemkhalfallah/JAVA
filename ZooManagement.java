@@ -12,22 +12,22 @@ public class ZooManagement {
         tiger.family = "Felidae";
         tiger.isMammal = true;
 
-        zoo myZoo = new zoo("myzoo", "bbb");
+        zoo myZoo1 = new zoo("myzoo1", "bbb");
+        zoo myZoo2 = new zoo("myzoo2", "ccc");
 
-        System.out.println("Adding lion: " + myZoo.addAnimal(lion));
-        System.out.println("Adding tiger: " + myZoo.addAnimal(tiger));
-        System.out.println("Is zoo full? " + myZoo.isZooFull());
-
-        for (int i = 0; i < 23; i++) {
+        myZoo1.addAnimal(lion);
+        myZoo2.addAnimal(tiger);
+        for (int i = 0; i < 5; i++) {
             Animal newAnimal = new Animal();
             newAnimal.name = "animal" + i;
             newAnimal.age = i;
             newAnimal.family = "GenericFamily";
             newAnimal.isMammal = true;
-            myZoo.addAnimal(newAnimal);
+            myZoo1.addAnimal(newAnimal);
         }
 
-        System.out.println("Is zoo full? " + myZoo.isZooFull());
-        myZoo.displayAnimals();
+        System.out.println("Zoo with more animals:");
+        zoo largerZoo = zoo.comparerZoo(myZoo1, myZoo2);
+        System.out.println(largerZoo);
     }
 }
