@@ -3,14 +3,13 @@ import java.util.Arrays;
 class zoo {
     String name;
     String city;
-    int nbrCages;
+    final int nbrCages = 25;
     Animal[] animals;
     int nbrAnimal;
 
-    public zoo(String name, String city, int nbrCages) {
+    public zoo(String name, String city) {
         this.name = name;
         this.city = city;
-        this.nbrCages = nbrCages;
         this.animals = new Animal[nbrCages];
         this.nbrAnimal = 0;
     }
@@ -21,9 +20,7 @@ class zoo {
     }
 
     boolean addAnimal(Animal animal) {
-
         if (searchAnimal(animal.name) == -1) {
-
             if (nbrAnimal < nbrCages) {
                 animals[nbrAnimal] = animal;
                 nbrAnimal++;
@@ -37,7 +34,6 @@ class zoo {
             return false;
         }
     }
-
 
     boolean removeAnimal(Animal animal) {
         int index = searchAnimal(animal.name);
@@ -55,7 +51,6 @@ class zoo {
         }
     }
 
-
      void displayAnimals() {
         if (nbrAnimal == 0) {
             System.out.println("No animals in the zoo.");
@@ -66,7 +61,6 @@ class zoo {
             }
         }
     }
-
 
      int searchAnimal(String name) {
         for (int i = 0; i < nbrAnimal; i++) {

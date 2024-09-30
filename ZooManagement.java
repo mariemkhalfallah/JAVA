@@ -12,10 +12,10 @@ public class ZooManagement {
         tiger.family = "Felidae";
         tiger.isMammal = true;
         
-        zoo myZoo = new zoo("myzoo", "bbb", 3);
+        zoo myZoo = new zoo("myzoo", "bbb");
 
-        myZoo.addAnimal(lion);
-        myZoo.addAnimal(tiger);
+        System.out.println("Adding lion: " + myZoo.addAnimal(lion));
+        System.out.println("Adding tiger: " + myZoo.addAnimal(tiger));
 
         myZoo.displayAnimals();
 
