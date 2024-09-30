@@ -26,19 +26,20 @@ class zoo {
                 nbrAnimal++;
                 return true;
             } else {
-                System.out.println("Unable to add animal: Zoo is full.");
                 return false;
             }
         } else {
-            System.out.println("Animal " + animal.name + " already exists in the zoo.");
             return false;
         }
+    }
+
+    boolean isZooFull() {
+        return nbrAnimal >= nbrCages;
     }
 
     boolean removeAnimal(Animal animal) {
         int index = searchAnimal(animal.name);
         if (index != -1) {
-
             for (int i = index; i < nbrAnimal - 1; i++) {
                 animals[i] = animals[i + 1];
             }
@@ -46,7 +47,6 @@ class zoo {
             nbrAnimal--;
             return true;
         } else {
-            System.out.println("Animal " + animal.name + " not found in the zoo.");
             return false;
         }
     }
@@ -62,7 +62,7 @@ class zoo {
         }
     }
 
-     int searchAnimal(String name) {
+    int searchAnimal(String name) {
         for (int i = 0; i < nbrAnimal; i++) {
             if (animals[i].name.equals(name)) {
                 return i;
