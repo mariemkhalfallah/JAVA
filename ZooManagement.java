@@ -6,24 +6,35 @@ public class ZooManagement {
         lion.family = "Felidae";
         lion.isMammal = true;
 
-        Animal tiger = new Animal();
-        tiger.name = "tiger";
-        tiger.age = 10;
-        tiger.family = "Felidae";
-        tiger.isMammal = true;
-
-        Animal bear = new Animal();
-        bear.name = "bear";
-        bear.age = 8;
-        bear.family = "Ursidae";
-        bear.isMammal = true;
 
         zoo myZoo = new zoo("myzoo", "bbb", 2);
 
 
-        System.out.println(myZoo.addAnimal(lion));
-        System.out.println(myZoo.addAnimal(tiger));
-        System.out.println(myZoo.addAnimal(bear));
-        System.out.println(myZoo);
+        myZoo.addAnimal(lion);
+
+
+        myZoo.displayAnimals();
+
+
+        int index = myZoo.searchAnimal("lion");
+        System.out.println("Index of lion: " + index);
+
+
+        Animal lionDuplicate = new Animal();
+        lionDuplicate.name = "lion";
+        lionDuplicate.age = 12;
+        lionDuplicate.family = "Felidae";
+        lionDuplicate.isMammal = true;
+
+
+        boolean added = myZoo.addAnimal(lionDuplicate);
+        System.out.println("Was the duplicate lion added? " + added);
+
+
+        myZoo.displayAnimals();
+
+
+        index = myZoo.searchAnimal("lion");
+        System.out.println("Index of duplicate lion: " + index);
     }
 }
