@@ -31,7 +31,19 @@ class zoo {
     }
 
 
-    private int searchAnimal(String name) {
+    void displayAnimals() {
+        if (nbrAnimal == 0) {
+            System.out.println("No animals in the zoo.");
+        } else {
+            System.out.println("Animals in the zoo:");
+            for (int i = 0; i < nbrAnimal; i++) {
+                System.out.println(animals[i]);
+            }
+        }
+    }
+
+
+    int searchAnimal(String name) {
         for (int i = 0; i < nbrAnimal; i++) {
             if (animals[i].name.equals(name)) {
                 return i;
@@ -40,3 +52,4 @@ class zoo {
         return -1;
     }
 }
+
