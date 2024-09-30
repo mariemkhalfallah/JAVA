@@ -3,7 +3,7 @@ import java.util.Arrays;
 class zoo {
     String name;
     String city;
-    int nbrCages;
+    int nbrCages; 
     Animal[] animals;
     int nbrAnimal;
 
@@ -22,16 +22,24 @@ class zoo {
 
     boolean addAnimal(Animal animal) {
 
-        if (searchAnimal(animal.name) == -1 && nbrAnimal < nbrCages) {
-            animals[nbrAnimal] = animal;
-            nbrAnimal++;
-            return true;
+        if (searchAnimal(animal.name) == -1) {
+
+            if (nbrAnimal < nbrCages) {
+                animals[nbrAnimal] = animal;
+                nbrAnimal++;
+                return true;
+            } else {
+                System.out.println("Unable to add animal: Zoo is full.");
+                return false;
+            }
+        } else {
+            System.out.println("Animal " + animal.name + " already exists in the zoo.");
+            return false;
         }
-        return false;
     }
 
 
-    void displayAnimals() {
+     void displayAnimals() {
         if (nbrAnimal == 0) {
             System.out.println("No animals in the zoo.");
         } else {
@@ -43,7 +51,7 @@ class zoo {
     }
 
 
-    int searchAnimal(String name) {
+     int searchAnimal(String name) {
         for (int i = 0; i < nbrAnimal; i++) {
             if (animals[i].name.equals(name)) {
                 return i;
@@ -52,4 +60,3 @@ class zoo {
         return -1;
     }
 }
-
