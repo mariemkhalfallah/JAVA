@@ -11,38 +11,23 @@ public class ZooManagement {
         tiger.age = 10;
         tiger.family = "Felidae";
         tiger.isMammal = true;
+        
+        zoo myZoo = new zoo("myzoo", "bbb", 3);
 
-
-        zoo myZoo = new zoo("myzoo", "bbb", 2);
-
-
-        System.out.println("Adding lion: " + myZoo.addAnimal(lion));
-        System.out.println("Adding tiger: " + myZoo.addAnimal(tiger));
-
+        myZoo.addAnimal(lion);
+        myZoo.addAnimal(tiger);
 
         myZoo.displayAnimals();
 
+        boolean removedLion = myZoo.removeAnimal(lion);
+        System.out.println("Removed lion: " + removedLion);
 
-        Animal lionDuplicate = new Animal();
-        lionDuplicate.name = "lion";
-        lionDuplicate.age = 12;
-        lionDuplicate.family = "Felidae";
-        lionDuplicate.isMammal = true;
-
-
-        boolean addedDuplicate = myZoo.addAnimal(lionDuplicate);
-        System.out.println("Adding duplicate lion: " + addedDuplicate);
-
+        myZoo.displayAnimals();
 
         Animal bear = new Animal();
         bear.name = "bear";
-        bear.age = 8;
-        bear.family = "Ursidae";
-        bear.isMammal = true;
-
-        boolean addedBear = myZoo.addAnimal(bear);
-        System.out.println("Adding bear: " + addedBear);
-
+        boolean removedBear = myZoo.removeAnimal(bear);
+        System.out.println("Removed bear: " + removedBear);
 
         myZoo.displayAnimals();
     }

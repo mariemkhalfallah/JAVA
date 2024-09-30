@@ -3,7 +3,7 @@ import java.util.Arrays;
 class zoo {
     String name;
     String city;
-    int nbrCages; 
+    int nbrCages;
     Animal[] animals;
     int nbrAnimal;
 
@@ -34,6 +34,23 @@ class zoo {
             }
         } else {
             System.out.println("Animal " + animal.name + " already exists in the zoo.");
+            return false;
+        }
+    }
+
+
+    boolean removeAnimal(Animal animal) {
+        int index = searchAnimal(animal.name);
+        if (index != -1) {
+
+            for (int i = index; i < nbrAnimal - 1; i++) {
+                animals[i] = animals[i + 1];
+            }
+            animals[nbrAnimal - 1] = null;
+            nbrAnimal--;
+            return true;
+        } else {
+            System.out.println("Animal " + animal.name + " not found in the zoo.");
             return false;
         }
     }
