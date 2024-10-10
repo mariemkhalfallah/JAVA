@@ -20,17 +20,14 @@ class zoo {
     }
 
     boolean addAnimal(Animal animal) {
-        if (searchAnimal(animal.name) == -1) {
-            if (nbrAnimal < nbrCages) {
+        if (searchAnimal(animal.name) == -1 && !isZooFull()) {
+                System.out.println("Unable to add animal: Zoo is full.");
+                return false;
+            }else {
                 animals[nbrAnimal] = animal;
                 nbrAnimal++;
                 return true;
-            } else {
-                return false;
             }
-        } else {
-            return false;
-        }
     }
 
     boolean isZooFull() {
