@@ -8,5 +8,4 @@ class Animal {
     public String toString() {
         return "name: " + name + " age: " + age + " family: " + family + " isMammal: " + isMammal;
     }
-
 }

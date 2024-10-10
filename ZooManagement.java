@@ -1,20 +1,33 @@
 public class ZooManagement {
     public static void main(String[] args) {
-        Animal Ani = new Animal();
-        Ani.name = "lion";
-        Ani.age = 12;
-        Ani.family = "eee";
-        Ani.isMammal = true;
+        Animal lion = new Animal();
+        lion.name = "lion";
+        lion.age = 12;
+        lion.family = "Felidae";
+        lion.isMammal = true;
 
-        zoo myZoo = new zoo();
-        myZoo.name = "myzoo";
-        myZoo.city = "bbb";
-        myZoo.nbrCages = 25;
-        myZoo.animals = new Animal[25];
-        myZoo.animals[1] = Ani; // Add the animal to the zoo
+        Animal tiger = new Animal();
+        tiger.name = "tiger";
+        tiger.age = 10;
+        tiger.family = "Felidae";
+        tiger.isMammal = true;
 
+        zoo myZoo1 = new zoo("myzoo1", "bbb");
+        zoo myZoo2 = new zoo("myzoo2", "ccc");
 
-        System.out.println(myZoo);
-        System.out.println(myZoo.toString());
+        myZoo1.addAnimal(lion);
+        myZoo2.addAnimal(tiger);
+        for (int i = 0; i < 5; i++) {
+            Animal newAnimal = new Animal();
+            newAnimal.name = "animal" + i;
+            newAnimal.age = i;
+            newAnimal.family = "GenericFamily";
+            newAnimal.isMammal = true;
+            myZoo1.addAnimal(newAnimal);
+        }
+
+        System.out.println("Zoo with more animals:");
+        zoo largerZoo = zoo.comparerZoo(myZoo1, myZoo2);
+        System.out.println(largerZoo);
     }
 }
