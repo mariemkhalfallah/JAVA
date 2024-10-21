@@ -3,9 +3,10 @@ package entities;
 public class Penguin extends Aquatic {
     private float swimmingDepth;
 
+
     public Penguin(String family, String name, int age, boolean isMammal, String habitat) {
-        super(family, name, age, isMammal, habitat);
-        this.swimmingDepth = 2;
+        super(family, name, isMammal, age, habitat); // Correctly passes parameters to the superclass
+        this.swimmingSpeed = 15; // Default swimming speed for penguins
     }
 
     @Override
@@ -25,4 +26,6 @@ public class Penguin extends Aquatic {
     public void swim() {
         System.out.println("This penguin is swimming.");
     }
+
+
 }

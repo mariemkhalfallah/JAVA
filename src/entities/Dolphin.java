@@ -4,8 +4,8 @@ public class Dolphin extends Aquatic {
     public float swimmingSpeed;
 
     public Dolphin(String family, String name, int age, boolean isMammal, String habitat) {
-        super(family, name, age, isMammal, habitat);
-        this.swimmingSpeed = 22;
+        super(family, name, isMammal, age, habitat); // Corrected the order of parameters
+        this.swimmingSpeed = 22; // Default swimming speed
     }
 
     @Override

@@ -3,7 +3,8 @@ package entities;
 public class Terrestrial extends Animal {
     public int nbrLegs;
 
-    public Terrestrial(String family, String name, int age, boolean isMammal, int nbrLegs) {
+
+    public Terrestrial(String family, int age, String name, boolean isMammal, int nbrLegs) {
         super(family, name, isMammal, age);
         this.nbrLegs = nbrLegs;
     }

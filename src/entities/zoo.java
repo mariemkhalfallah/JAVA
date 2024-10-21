@@ -6,15 +6,23 @@ public class zoo {
     private String name;
     private String city;
     private final int nbrCages = 25;
-    private Animal[] animals;
-    private int nbrAnimal;
+    public Animal[] animals;
+    public int nbrAnimal;
+    private int nbrAquatic=0;
+    private Aquatic aquaticAniamls[];
+    float maxDepth = 0.0f;
 
-    public zoo(String name, String city) {
+    int dolphinCount = 0;
+    int penguinCount = 0;
+
+    public zoo(String name, String city ) {
         setName(name);
         this.city = city;
         this.animals = new Animal[nbrCages];
         this.nbrAnimal = 0;
+        this.aquaticAniamls = new Aquatic[10];
     }
+
 
     public String getName() {
         return name;
@@ -96,4 +104,39 @@ public class zoo {
     public static zoo comparerZoo(zoo z1, zoo z2) {
         return z1.nbrAnimal > z2.nbrAnimal ? z1 : z2;
     }
+    public void addAquaticAnimal(Aquatic aquatic){
+        if ( nbrAquatic<=10 )  {
+            aquaticAniamls[nbrAquatic] = aquatic;
+            nbrAquatic++;
+        }else System.out.println("il ne faut pas depasser 10 animals aquatic");
+    }
+    public void Swim() {
+        for (int i = 0; i < nbrAquatic; i++) {
+            aquaticAniamls[i].swim();
+        }
+    }
+    public float maxPenguinSwimmingDepth() {
+        for (Aquatic aquatic : aquaticAniamls) {
+            if (aquatic instanceof Penguin) {
+                Penguin penguin = (Penguin) aquatic;
+                if (penguin.getSwimmingDepth() > maxDepth) {
+                    maxDepth = penguin.getSwimmingDepth();
+                }
+            }
+        }
+        return maxDepth;
+    }
+
+    public void displayNumberOfAquaticsByType() {
+        for (Aquatic aquatic : aquaticAniamls) {
+            if (aquatic instanceof Dolphin) {
+                dolphinCount++;
+            } else if (aquatic instanceof Penguin) {
+                penguinCount++;
+            }
+        }
+        System.out.println("Number of Dolphins: " + dolphinCount);
+        System.out.println("Number of Penguins: " + penguinCount);
+    }
 }
+
