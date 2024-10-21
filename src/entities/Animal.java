@@ -5,6 +5,14 @@ public class Animal {
     public int age;
     public String family;
     public boolean isMammal;
+    public Animal() {}
+    public Animal(String family, String name, boolean isMammal, int age) {
+        this.family = family;
+        this.name = name;
+        this.isMammal = isMammal;
+        this.age = age;
+    }
+
 
     public String getName() {
         return name;
