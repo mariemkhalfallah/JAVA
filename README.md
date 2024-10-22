@@ -6,22 +6,22 @@ Il comprend des classes pour chaque type d'animal, un système pour ajouter, sup
 #### `main`
 **[main](https://github.com/mariemkhalfallah/java/tree/main)**
 Cette branche contient la version principale et stable du projet d'aprés les merges qui deja faite .
+#### `Prosit1`
+- **[Branche prosit1 ](https://github.com/mariemkhalfallah/java/tree/prosit1)**
 
-- **[Branch prosit1 ](https://github.com/mariemkhalfallah/java/tree/prosit1)**
+#### `prosit2`
+- **[Branche prosit2](https://github.com/mariemkhalfallah/java/tree/prosit2)**
 
-  
-- **[Branch prosit2](https://github.com/mariemkhalfallah/java/tree/prosit2)**
+#### `prosit3`
+- **[Branche prosit3 ](https://github.com/mariemkhalfallah/java/tree/prosit3)**
 
-  
-- **[Branch prosit3 ](https://github.com/mariemkhalfallah/java/tree/prosit3)**
+#### `prosit4`
+- **[Branche prosit4 ](https://github.com/mariemkhalfallah/java/tree/prosit4)**
 
-  
-- **[Branch prosit4 ](https://github.com/mariemkhalfallah/java/tree/prosit4)**
+#### `prosit5`
+- **[Branche prosit5 ](https://github.com/mariemkhalfallah/java/tree/prosit5)**
 
-  
-- **[Branch prosit5 ](https://github.com/mariemkhalfallah/java/tree/prosit5)**
-
-  
-- **[Branch prosit6 ](https://github.com/mariemkhalfallah/java/tree/prosit6)**
+#### `prosit6`
+- **[Branche prosit6 ](https://github.com/mariemkhalfallah/java/tree/prosit6)**
 
   
