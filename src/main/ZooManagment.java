@@ -1,42 +1,50 @@
 package main;
 
-import entities.Animal;
-import entities.zoo;
-import entities.Aquatic;
-import entities.Terrestrial;
-import entities.Dolphin;
-import entities.Penguin;
+import entities.*;
+import enums.Food;
+import exceptions.InvalidAgeException;
+import exceptions.ZooFullException;
 
 public class ZooManagment {
     public static void main(String[] args) {
-        zoo Zoo = new zoo("MyZoo", "CityName");
+        Zoo zoo = new Zoo(3);
 
-        Dolphin dolphin = new Dolphin("Dolphin Family", "Dolphin", 8, true, "Sea");
-        Penguin penguin1 = new Penguin("Penguin Family", "Penguin", 6, true, "Arctic");
-        penguin1.setSwimmingDepth(30.5f);
+        try {
+            // Création et ajout d'un animal aquatique (Dauphin)
+            Aquatic dolphin = new Dolphin("Delphinidae", "Dolly", 5, true, "Ocean");
+            zoo.addAnimal(dolphin);
+            dolphin.eatMeat(Food.MEAT);
 
-        Penguin penguin2 = new Penguin("Penguin Family", "Penguin2", 7, true, "Antarctic");
-        penguin2.setSwimmingDepth(50.0f);
-        Zoo.addAquaticAnimal(dolphin);
-        Zoo.addAquaticAnimal(penguin1);
-        Zoo.addAquaticAnimal(penguin2);
+            // Création et ajout d'un pingouin
+            Penguin penguin = new Penguin("Spheniscidae", "Pingu", 3, false, "Arctic");
+            zoo.addAnimal(penguin);
+            penguin.eatMeat(Food.MEAT);
 
-        Zoo.Swim();
+            // Création et ajout d'un animal terrestre (Omnivore)
+            Terrestrial bear = new Terrestrial("Ursidae", "Baloo", 10, true, "Forest");
+            zoo.addAnimal(bear);
+            bear.eatMeat(Food.MEAT);
+            bear.eatPlant(Food.PLANT);
+            bear.eatPlantAndMeat(Food.BOTH);
 
-        System.out.println("Max Penguin Swimming Depth: " + Zoo.maxPenguinSwimmingDepth());
+            // Tentative d'ajout d'un animal en dépassant la capacité du zoo
+            Aquatic shark = new Aquatic("Carcharhinidae", "Sharky", 7, true, "Sea");
+            zoo.addAnimal(shark); // Devrait lever une ZooFullException
 
-        Zoo.displayNumberOfAquaticsByType();
+        } catch (ZooFullException e) {
+            System.out.println("Erreur: " + e.getMessage());
+        } catch (InvalidAgeException e) {
+            System.out.println("Erreur: " + e.getMessage());
+        }
 
-        Aquatic dolphin1 = new Dolphin("Dolphin Family", "Dolphin1", 8, true, "Sea");
-        Aquatic dolphin2 = new Dolphin("Dolphin Family", "Dolphin1", 8, true, "Sea");
-
-
-        if (dolphin1.equals(dolphin2)) {
-            System.out.println("The two aquatic animals are identical.");
-        } else {
-            System.out.println("The two aquatic animals are different.");
+        try {
+            // Tentative d'ajout d'un animal avec un âge négatif pour tester InvalidAgeException
+            Penguin youngPenguin = new Penguin("Spheniscidae", "Tiny", -1, false, "Antarctica");
+            zoo.addAnimal(youngPenguin); // Devrait lever une InvalidAgeException
+        } catch (ZooFullException e) {
+            System.out.println("Erreur: " + e.getMessage());
+        } catch (InvalidAgeException e) {
+            System.out.println("Erreur: " + e.getMessage());
         }
     }
-
-
 }

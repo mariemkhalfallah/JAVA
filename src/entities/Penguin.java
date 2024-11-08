@@ -1,31 +1,24 @@
 package entities;
 
-public class Penguin extends Aquatic {
-    private float swimmingDepth;
+import enums.Food;
+import interfaces.Carnivore;
 
-
+public class Penguin extends Aquatic implements Carnivore<Food> {
     public Penguin(String family, String name, int age, boolean isMammal, String habitat) {
-        super(family, name, isMammal, age, habitat); // Correctly passes parameters to the superclass
-        this.swimmingSpeed = 15; // Default swimming speed for penguins
+        super(family, name, age, isMammal, habitat);
     }
 
     @Override
-    public String toString() {
-        return "Penguin Name: " + name + ", Family: " + family + ", Is Mammal: " + isMammal + ", Age: " + age + ", Habitat: " + habitat + ", Swimming Depth: " + swimmingDepth + " meters";
-    }
-
-    public float getSwimmingDepth() {
-        return swimmingDepth;
-    }
-
-    public void setSwimmingDepth(float swimmingDepth) {
-        this.swimmingDepth = swimmingDepth;
+    public void makeSound() {
+        System.out.println("Penguin sound!");
     }
 
     @Override
-    public void swim() {
-        System.out.println("This penguin is swimming.");
+    public void eatMeat(Food meat) {
+        if (meat == Food.MEAT || meat == Food.BOTH) {
+            System.out.println(name + " is eating meat.");
+        } else {
+            System.out.println(name + " cannot eat this food.");
+        }
     }
-
-
 }
