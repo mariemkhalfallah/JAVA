@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="426781f2-d933-49df-b349-b062df8326fb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/entities/AffectationHashMap.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/entities/Departement.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/entities/DepartementHashSet.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/entities/Employe.java" afterDir="false" />

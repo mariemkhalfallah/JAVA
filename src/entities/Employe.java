@@ -6,19 +6,16 @@ public class Employe {
     private int id;
     private String nom;
     private String prenom;
-    private String nomDepartement;
-    private int grade;
+    private String grade;
+    private Departement departement;
 
-    // Constructeur sans paramètres
-    public Employe() {}
-
-    // Constructeur avec paramètres
-    public Employe(int id, String nom, String prenom, String nomDepartement, int grade) {
+    // Constructeur
+    public Employe(int id, String nom, String prenom, String grade, Departement departement) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
-        this.nomDepartement = nomDepartement;
         this.grade = grade;
+        this.departement = departement;
     }
 
     // Getters et Setters
@@ -46,40 +43,50 @@ public class Employe {
         this.prenom = prenom;
     }
 
-    public String getNomDepartement() {
-        return nomDepartement;
-    }
-
-    public void setNomDepartement(String nomDepartement) {
-        this.nomDepartement = nomDepartement;
-    }
-
-    public int getGrade() {
+    public String getGrade() {
         return grade;
     }
 
-    public void setGrade(int grade) {
+    public void setGrade(String grade) {
         this.grade = grade;
     }
 
-    // Redéfinition de equals
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        Employe employe = (Employe) obj;
-        return id == employe.id && Objects.equals(nom, employe.nom);
+    public Departement getDepartement() {
+        return departement;
     }
 
-    // Redéfinition de toString
+    public void setDepartement(Departement departement) {
+        this.departement = departement;
+    }
+
+    // Méthode pour obtenir le nom du département
+    public String getNomDepartement() {
+        return departement != null ? departement.getNomDepartement() : "Aucun département";
+    }
+
+    // Méthode toString
     @Override
     public String toString() {
         return "Employe{" +
                 "id=" + id +
                 ", nom='" + nom + '\'' +
                 ", prenom='" + prenom + '\'' +
-                ", nomDepartement='" + nomDepartement + '\'' +
-                ", grade=" + grade +
+                ", grade='" + grade + '\'' +
+                ", departement=" + (departement != null ? departement.getNomDepartement() : "Aucun département") +
                 '}';
+    }
+
+    // Méthode equals
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employe employe = (Employe) o;
+        return id == employe.id && Objects.equals(nom, employe.nom) && Objects.equals(prenom, employe.prenom);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, nom, prenom);
     }
 }

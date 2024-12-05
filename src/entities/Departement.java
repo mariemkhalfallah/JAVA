@@ -1,19 +1,21 @@
 package entities;
 
-import java.util.Objects;
-
 public class Departement {
     private int id;
-    private String nomDepartement;
+    private String nom;
     private int nombreEmployes;
 
-    public Departement() {}
-    public Departement(int id, String nomDepartement, int nombreEmployes) {
+    // Constructeurs
+    public Departement() {
+    }
+
+    public Departement(int id, String nom, int nombreEmployes) {
         this.id = id;
-        this.nomDepartement = nomDepartement;
+        this.nom = nom;
         this.nombreEmployes = nombreEmployes;
     }
 
+    // Getters et Setters
     public int getId() {
         return id;
     }
@@ -22,12 +24,12 @@ public class Departement {
         this.id = id;
     }
 
-    public String getNomDepartement() {
-        return nomDepartement;
+    public String getNom() {
+        return nom;
     }
 
-    public void setNomDepartement(String nomDepartement) {
-        this.nomDepartement = nomDepartement;
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
     public int getNombreEmployes() {
@@ -38,25 +40,26 @@ public class Departement {
         this.nombreEmployes = nombreEmployes;
     }
 
+    // Nouvelle méthode getNomDepartement
+    public String getNomDepartement() {
+        return nom; // Retourne simplement le nom du département
+    }
+
+    @Override
+    public String toString() {
+        return "Departement{id=" + id + ", nom='" + nom + "', nombreEmployes=" + nombreEmployes + '}';
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         Departement that = (Departement) obj;
-        return id == that.id && Objects.equals(nomDepartement, that.nomDepartement);
+        return id == that.id && nom.equals(that.nom);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, nomDepartement);
-    }
-
-    @Override
-    public String toString() {
-        return "Departement{" +
-                "id=" + id +
-                ", nomDepartement='" + nomDepartement + '\'' +
-                ", nombreEmployes=" + nombreEmployes +
-                '}';
+        return id + nom.hashCode();
     }
 }
