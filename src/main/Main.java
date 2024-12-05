@@ -1,32 +1,30 @@
 package main;
 
-import entities.Employe;
-import entities.SocieteArrayList;
+import entities.Departement;
+import entities.DepartementHashSet;
 
 public class Main {
     public static void main(String[] args) {
-        SocieteArrayList societe = new SocieteArrayList();
+        DepartementHashSet gestionDepartements = new DepartementHashSet();
 
-        Employe e1 = new Employe(1, "Mariem", "khalfallah", "aaaa",1 );
-        Employe e2 = new Employe(2, "Fatma", "khalfallah", "java", 8);
+        Departement d1 = new Departement(1, "IT", 50);
+        Departement d2 = new Departement(2, "Finance", 30);
+        Departement d3 = new Departement(3, "RH", 20);
+        
+        gestionDepartements.ajouterDepartement(d1);
+        gestionDepartements.ajouterDepartement(d2);
+        gestionDepartements.ajouterDepartement(d3);
 
-        societe.ajouterEmploye(e1);
-        societe.ajouterEmploye(e2);
+        System.out.println("Liste des départements :");
+        gestionDepartements.displayDepartement();
 
-        System.out.println("Liste des employés :");
-        societe.displayEmploye();
+        System.out.println("\nRecherche du département 'IT' : " + gestionDepartements.rechercherDepartement("IT"));
 
-        // Rechercher un employé
-        System.out.println("\nRecherche d'un employé nommé 'mariem' : " + societe.rechercherEmploye("mariem"));
+        System.out.println("\nDépartements triés par ID :");
+        gestionDepartements.trierDepartementById().forEach(System.out::println);
 
-        // Trier par ID
-        System.out.println("\nTri par ID :");
-        societe.trierEmployeParId();
-        societe.displayEmploye();
-
-        // Trier par département et grade
-        System.out.println("\nTri par département et grade :");
-        societe.trierEmployeParNomDépartementEtGrade();
-        societe.displayEmploye();
+        gestionDepartements.supprimerDepartement(d2);
+        System.out.println("\nAprès suppression de 'Finance' :");
+        gestionDepartements.displayDepartement();
     }
 }

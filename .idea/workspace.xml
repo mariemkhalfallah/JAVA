@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="426781f2-d933-49df-b349-b062df8326fb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/entities/Departement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/DepartementHashSet.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/entities/Employe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/IDepartement.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entities/Animal.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entities/Aquatic.java" beforeDir="false" />
@@ -38,19 +41,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.ZooManagement.executor": "Run",
-    "Application.ZooManagment.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "prosit5",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/khalf/ProjetIDE/Prosit4",
-    "onboarding.tips.debug.path": "C:/Users/khalf/ProjetIDE/Prosit4/src/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ZooManagement.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ZooManagment.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;prosit5&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/khalf/ProjetIDE/Prosit4&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/khalf/ProjetIDE/Prosit4/src/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
