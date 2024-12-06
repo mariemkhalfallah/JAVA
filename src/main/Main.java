@@ -1,53 +1,51 @@
 package main;
 
-import entities.*;
+import entities.Student;
+import entities.StudentManagement;
+
+import java.util.*;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 public class Main {
     public static void main(String[] args) {
-        // Création de départements
-        Departement dep1 = new Departement(1, "Informatique", 10);
-        Departement dep2 = new Departement(2, "RH", 5);
-        Departement dep3 = new Departement(3, "Finance", 8);
+        // Initialisation des données
+        StudentManagement management = new StudentManagement();
+        List<Student> students = Arrays.asList(
+                new Student(1, "Mariem", 18),
+                new Student(2, "Wissal", 24),
+                new Student(3, "Emna", 23)
+        );
 
-        // Création d'employés
-        Employe emp1 = new Employe(1, "Mariem", "Khalfallah", "Manager", dep1);
-        Employe emp2 = new Employe(2, "Fatma", "Khalfallah", "Analyste", dep2);
-        Employe emp3 = new Employe(3, "Amna", "Mkadmi", "Technicien", dep1);
-        Employe emp4 = new Employe(4, "Zeynib", "Saidani", "Comptable", dep3);
-        Employe emp5 = new Employe(5, "Youssif", "Trabilsi", "Analyste", dep2);
+        // Afficher tous les étudiants
+        System.out.println("Affichage des étudiants :");
+        management.displayStudents(students, System.out::println);
 
-        // Création de la société (gestion des employés)
-        SocieteArrayList societe = new SocieteArrayList();
+        // Afficher les étudiants ayant plus de 20 ans
+        System.out.println("\nÉtudiants ayant plus de 20 ans :");
+        management.displayStudentsByFilter(
+                students,
+                student -> student.getAge() > 20,
+                System.out::println
+        );
 
-        // Ajouter des employés
-        societe.ajouterEmploye(emp1);
-        societe.ajouterEmploye(emp2);
-        societe.ajouterEmploye(emp3);
-        societe.ajouterEmploye(emp4);
-        societe.ajouterEmploye(emp5);
+        // Retourner les noms des étudiants
+        String names = management.returnStudentsNames(students, Student::getName);
+        System.out.println("\nNoms des étudiants : " + names);
 
-        // Affichage des employés
-        System.out.println("Liste des employés :");
-        societe.displayEmploye();
+        // Créer un nouvel étudiant
+        Student newStudent = management.createStudent(() -> new Student(4, "fatma", 23));
+        System.out.println("\nNouvel étudiant créé : " + newStudent);
 
-        // Rechercher un employé par nom
-        System.out.println("\nRecherche de l'employé 'Martin': " + societe.rechercherEmploye("Martin"));
-        System.out.println("Recherche de l'employé 'Toto': " + societe.rechercherEmploye("Toto"));
+        // Trier les étudiants par ID
+        List<Student> sortedStudents = management.sortStudentsById(students, Comparator.comparingInt(Student::getId));
+        System.out.println("\nÉtudiants triés par ID :");
+        sortedStudents.forEach(System.out::println);
 
-        // Trier les employés par ID
-        System.out.println("\nTri des employés par ID :");
-        societe.trierEmployeParId();
-        societe.displayEmploye();
-
-        // Trier les employés par nom de département, puis grade
-        System.out.println("\nTri des employés par nom de département et grade :");
-        societe.trierEmployeParNomDepartementEtGrade();
-        societe.displayEmploye();
-
-        // Supprimer un employé
-        System.out.println("\nSuppression de l'employé Durand (Luc)...");
-        societe.supprimerEmploye(emp3);
-        System.out.println("Liste des employés après suppression :");
-        societe.displayEmploye();
+        // Convertir en Stream et afficher
+        System.out.println("\nConversion en Stream et affichage :");
+        management.convertToStream(students).forEach(System.out::println);
     }
 }
