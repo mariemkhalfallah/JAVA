@@ -5,21 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="426781f2-d933-49df-b349-b062df8326fb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enums/Food.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exceptions/InvalidAgeException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exceptions/ZooFullException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Carnivore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Herbivore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Omnivore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Aquatic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Aquatic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Dolphin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Dolphin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Penguin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Penguin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Terrestrial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Terrestrial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/zoo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Zoo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ZooManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ZooManagment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/Departement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/DepartementHashSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/Employe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/IDepartement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Animal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Aquatic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Dolphin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/SocieteArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Penguin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/IGestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Terrestrial.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/zoo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ZooManagment.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,27 +41,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.ZooManagement.executor": "Run",
-    "Application.ZooManagment.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "prosit5",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/khalf/ProjetIDE/Prosit4",
-    "onboarding.tips.debug.path": "C:/Users/khalf/ProjetIDE/Prosit4/src/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ZooManagement.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ZooManagment.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;prosit5&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/khalf/ProjetIDE/Prosit4&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/khalf/ProjetIDE/Prosit4/src/Main.java&quot;
   }
-}]]></component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-1.8.0_402-corretto-1.8.0_402-4caba194b151-ae57be32" />
-      </set>
-    </attachedChunks>
-  </component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
