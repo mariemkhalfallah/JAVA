@@ -9,7 +9,11 @@ public class SocieteArrayList implements IGestion<Employe> {
 
     @Override
     public void ajouterEmploye(Employe e) {
-        listeEmployes.add(e);
+        if (!listeEmployes.contains(e)) {
+            listeEmployes.add(e);
+        } else {
+            System.out.println("Employé déjà existant !");
+        }
     }
 
     @Override
@@ -45,9 +49,9 @@ public class SocieteArrayList implements IGestion<Employe> {
     }
 
     @Override
-    public void trierEmployeParNomDépartementEtGrade() {
+    public void trierEmployeParNomDepartementEtGrade() {
         listeEmployes.sort(Comparator
-                .comparing(Employe::getNomDepartement)
-                .thenComparingInt(Employe::getGrade));
+                .comparing(Employe::getNomDepartement, Comparator.nullsLast(Comparator.naturalOrder()))
+                .thenComparing(Employe::getGrade, Comparator.nullsLast(Comparator.naturalOrder())));
     }
 }
