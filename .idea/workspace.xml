@@ -10,6 +10,9 @@
       <change afterPath="$PROJECT_DIR$/src/entities/DepartementHashSet.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/entities/Employe.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/entities/IDepartement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/Management.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/StudentManagement.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entities/Animal.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entities/Aquatic.java" beforeDir="false" />
