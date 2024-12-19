@@ -1,5 +1,4 @@
 # Projet Gestion du Zoo - Projet Gestion des Employés
-#           Documentation Technique
 
 ## Description Générale
 Ce projet est un système de gestion de zoo permettant de gérer différents types d'animaux (terrestres et aquatiques...). Les différentes fonctionnalités sont implémentées dans des branches distinctes.
