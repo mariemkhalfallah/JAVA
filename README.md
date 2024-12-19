@@ -5,13 +5,20 @@ Ce projet est un système de gestion de zoo permettant de gérer différents typ
 
 ### Branches disponibles
 
-1. **[Aquatic Branch](https://github.com/votre-utilisateur/votre-projet/tree/aquatic-branch)**  
-   Contient la logique pour la gestion des animaux aquatiques. Toutes les classes liées aux animaux aquatiques y sont définies.
+1. **[Prosit 1 Branch](https://github.com/mariemkhalfallah/java/tree/prosit1)**
+2. **[Prosit 2 Branch](https://github.com/mariemkhalfallah/java/tree/prosit2)**  
+3. **[Prosit 3 Branch](https://github.com/mariemkhalfallah/java/tree/prosit3)**  
+4. **[Prosit 4 Branch](https://github.com/mariemkhalfallah/java/tree/prosit4)**  
+5. **[Prosit 5 Branch](https://github.com/mariemkhalfallah/java/tree/prosit5)**  
+6. **[Prosit 6 Branch](https://github.com/mariemkhalfallah/java/tree/prosit6)**  
+7. **[Prosit 7 Branch](https://github.com/mariemkhalfallah/java/tree/prosit7)**  
+8. **[Prosit 8 Branch](https://github.com/mariemkhalfallah/java/tree/prosit8)**  
 
-2. **[Terrestrial Branch](https://github.com/votre-utilisateur/votre-projet/tree/terrestrial-branch)**  
+
+3. **[Terrestrial Branch](https://github.com/votre-utilisateur/votre-projet/tree/terrestrial-branch)**  
    Cette branche contient le code des animaux terrestres ainsi que les méthodes spécifiques aux animaux qui vivent sur terre.
 
-3. **[Zoo Management Branch](https://github.com/votre-utilisateur/votre-projet/tree/zoo-management-branch)**  
+4. **[Zoo Management Branch](https://github.com/votre-utilisateur/votre-projet/tree/zoo-management-branch)**  
    Gestion des animaux dans le zoo, incluant l'ajout, la suppression, et les statistiques sur les animaux présents dans le zoo.
 
 ### Instructions pour Naviguer Entre les Branches
