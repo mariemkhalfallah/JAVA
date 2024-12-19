@@ -1,4 +1,4 @@
-# Projet Gestion du Zoo - Projet Gestion des Employés-
+# Projet Gestion du Zoo - Projet Gestion des Employés
 #           Documentation Technique
 
 ## Description Générale
